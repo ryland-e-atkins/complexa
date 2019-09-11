@@ -1,0 +1,54 @@
+{
+    "CF01_Filer": {
+        "numRecords": 18000,
+        "fields": {
+            "FilerId": {
+                "type": "primaryKey"
+            },
+            "CompanyId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 13000
+            },
+            "FirstName": {
+                "type": "firstName"
+            },
+            "LastName": {
+                "type": "lastName"
+            },
+            "Title": {
+                "type": "title"
+            },
+            "Email": {
+                "type": "email"
+            },
+            "Phone": {
+                "type": "phone"
+            },
+            "CreatedOn": {
+                "type": "date"
+            },
+            "CreatedBy": {
+                "type": "email"
+            },
+            "ModifiedOn": {
+                "type": "date",
+                "percentNull": 40
+            },
+            "ModifiedBy": {
+                "type": "email",
+                "percentNull": 40
+            },
+            "IsActive": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            "PrimaryFiler": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "CF01_CosmeticEstablishment": {
+        "numRecords": 6000,
+        "fields": {
+            "CosmeticEstablishmentId": {
+                "type": "primaryKey"
+            },
+            "CompanyId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 13000
+            },
+            "StatusId": {
+                "type": "integer",
+                "include": [1,2,3,4,5,100,101,102,103,104,105,106,108,110]
+            },
+            "AuthorizedIndividualId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 18000,
+                "percentNull": 10
+            },
+            "AlternativeAuthorizedIndividualId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 18000,
+                "percentNull": 90
+            },
+            "EstablishmentType": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 5
+            },
+            "RegistrationNumber": {
+                "type": "primaryKey",
+                "percentNull": 50
+            },
+            "ParentCompany": {
+                "type": "companyName",
+                "percentNull": 60
+            },
+            "EstablishmentName": {
+                "type": "brandName",
+                "maxLength": 100
+            },
+            "IsOwnerOperator": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "IsTheAddressManufacturingOrPacking": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "AuthorizedIndividualDate": {
+                "type": "date"
+            },
+            "AlternativeAuthorizedIndividualDate": {
+                "type": "date",
+                "percentNull": 95
+            },
+            "RegisteredDate": {
+                "type": "date",
+                "percentNull": 5
+            },
+            "ApprovedDate": {
+                "type": "date",
+                "percentNull": 15
+            },
+            "ApprovedBy": {
+                "type": "email",
+                "percentNull": 15
+            },
+            "AmendedDate": {
+                "type": "date",
+                "percentNull": 70
+            },
+            "VerifiedDate": {
+                "type": "date"
+            },
+            "DiscontinuedDate": {
+                "type": "date",
+                "percentNull": 80
+            },
+            "ProcessedDate": {
+                "type": "date",
+                "percentNull": 50
+            },
+            "RejectedDate": {
+                "type": "date",
+                "percentNull": 90
+            },
+            "IsOnHold": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "IsPaperFiling": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "CreatedOn": {
+                "type": "date"
+            },
+            "CreatedBy": {
+                "type": "email"
+            },
+            "ModifiedOn": {
+                "type": "date",
+                "percentNull": 40
+            },
+            "ModifiedBy": {
+                "type": "email",
+                "percentNull": 40
+            },
+            "IsActive": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "CF01_Labeler": {
+        "numRecords": 6000,
+        "fields": {
+            "LabelerId": {
+                "type": "primaryKey"
+            },
+            "CompanyId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 13000
+            },
+            "StatusId": {
+                "type": "integer",
+                "include": [1,100,101,102]
+            },
+            "LabelerNumber": {
+                "type": "primaryKey"
+            },
+            "LabelerName": {
+                "type": "companyName"
+            },
+            "CreatedOn": {
+                "type": "date"
+            },
+            "CreatedBy": {
+                "type": "email"
+            },
+            "ModifiedOn": {
+                "type": "date",
+                "percentNull": 40
+            },
+            "ModifiedBy": {
+                "type": "email",
+                "percentNull": 40
+            },
+            "IsActive": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 1
+            }
+        }
+    }
+}

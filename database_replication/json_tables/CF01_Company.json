@@ -1,0 +1,70 @@
+{
+    "CF01_Company": {
+        "numRecords": 13000,
+        "fields": {
+            "CompanyId": {
+                "type": "primaryKey"
+            },
+            "CompanyName": {
+                "type": "companyName"
+            },
+            "FirstName": {
+                "type": "firstName"
+            },
+            "LastName": {
+                "type": "lastName"
+            },
+            "JobTitle": {
+                "type": "title"
+            },
+            "Region": {
+                "type": "region",
+                "percentNull": 80
+            },
+            "Country": {
+                "type": "country"
+            },
+            "UserName": {
+                "type": "email"
+            },
+            "Phone": {
+                "type": "phone"
+            },
+            "Email": {
+                "type": "email"
+            },
+            "AlternateEmail": {
+                "type": "email",
+                "percentNull": 75
+            },
+            "Status": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "Fax": {
+                "type": "phone",
+                "percentNull": 95
+            },
+            "CreatedOn": {
+                "type": "date"
+            },
+            "CreatedBy": {
+                "type": "email"
+            },
+            "ModifiedOn": {
+                "type": "date",
+                "percentNull": 40
+            },
+            "ModifiedBy": {
+                "type": "email",
+                "percentNull": 40
+            },
+            "IsActive": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 1
+            }
+        }
+    }
+}

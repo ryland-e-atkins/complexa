@@ -1,0 +1,154 @@
+{
+    "CF01_CosmeticFormulation": {
+        "numRecords": 96000,
+        "fields": {
+            "CosmeticFormulationId": {
+                "type": "primaryKey"
+            },
+            "CategoryId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 81
+            },
+            "CompanyId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 13000
+            },
+            "LabelerId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 6000
+            },
+            "ManufacturerId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 6000
+            },
+            "PackerId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 6000
+            },
+            "StatusId": {
+                "type": "integer",
+                "include": [1,2,3,4,5,100,101,102,103,104,105,106,108,109]
+            },
+            "AuthorizedIndividualId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 18000,
+                "percentNull": 10
+            },
+            "AlternativeAuthorizedIndividualId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 18000,
+                "percentNull": 90
+            },
+            "RegistrationNumber": {
+                "type": "primaryKey",
+                "percentNull": 50
+            },
+            "IsAContractManufacturer": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "IsCommerciallyDistributed": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "LabelerType": {
+                "type": "enum",
+                "list": ["", "MANUFACTURER", "PACKER", "DISTRIBUTOR", 
+                    "MANUFACTURER,PACKER", "MANUFACTURER,DISTRIBUTOR",
+                    "PACKER,DISTRIBUTOR", "MANUFACTURER,PACKER,DISTRIBUTOR" ]
+            },
+            "FilerType": {
+                "type": "enum",
+                "list": ["", "MANUFACTURER", "PACKER", "DISTRIBUTOR",
+                    "MANUFACTURER,PACKER", "MANUFACTURER,DISTRIBUTOR",
+                    "PACKER,DISTRIBUTOR", "MANUFACTURER,PACKER,DISTRIBUTOR",
+                    "RETAILER", "RETAILER,MANUFACTURER", "RETAILER,PACKER", 
+                    "RETAILER,DISTRIBUTOR", "RETAILER,MANUFACTURER,PACKER",
+                    "RETAILER,MANUFACTURER,DISTRIBUTOR",
+                    "RETAILER,PACKER,DISTRIBUTOR",
+                    "RETAILER,MANUFACTURER,PACKER,DISTRIBUTOR" ]
+            },
+            "RegisteredDate": {
+                "type": "date",
+                "percentNull": 5
+            },
+            "ApprovedDate": {
+                "type": "date",
+                "percentNull": 15
+            },
+            "ApprovedBy": {
+                "type": "email",
+                "percentNull": 15
+            },
+            "AmendedDate": {
+                "type": "date",
+                "percentNull": 70
+            },
+            "VerifiedDate": {
+                "type": "date"
+            },
+            "DiscontinuedDate": {
+                "type": "date",
+                "percentNull": 80
+            },
+            "ProcessedDate": {
+                "type": "date",
+                "percentNull": 50
+            },
+            "RejectedDate": {
+                "type": "date",
+                "percentNull": 90
+            },
+            "AuthorizedIndividualDate": {
+                "type": "date"
+            },
+            "AlternativeAuthorizedIndividualDate": {
+                "type": "date",
+                "percentNull": 95
+            },
+            "IsOnHold": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "IsPaperFiling": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "CreatedOn": {
+                "type": "date"
+            },
+            "CreatedBy": {
+                "type": "email"
+            },
+            "ModifiedOn": {
+                "type": "date",
+                "percentNull": 40
+            },
+            "ModifiedBy": {
+                "type": "email",
+                "percentNull": 40
+            },
+            "IsActive": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            "ShowLegacyLabelerData": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 0
+            }
+        }
+    }
+}

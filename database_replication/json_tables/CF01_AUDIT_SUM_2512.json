@@ -1,0 +1,230 @@
+{
+    "CF01_AUDIT_SUM_2512": {
+        "numRecords": 5000,
+        "fields": {
+            "Id": {
+                "type" :"primaryKey"
+            },
+            "CosmeticFormulationId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 96000
+            },
+            "StatusId": {
+                "type": "integer",
+                "include": [1,2,3,4,5,100,101,102,103,104,105,106,108,109]
+            },
+            "StatusDescription": {
+                "type": "enum",
+                "list": ["ORIGINAL", "AMENDED", "DISCONTINUED", "RETURN FOR ACTION",
+                    "DUPLICATE", "DRAFT", "ACTIVE", "INACTIVE", "ON HOLD", "REJECTED",
+                    "PROCESSED", "RESUBMITTED", "CANCELLED", "PENDING REVIEW",
+                    "FILED", "REGISTERED"]
+            },
+            "RegistrationNumber": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 96000,
+                "percentNull": 50
+            },
+            "LabelerName": {
+                "type": "companyName"
+            },
+            "LabelerType": {
+                "type": "enum",
+                "list": ["", "MANUFACTURER", "PACKER", "DISTRIBUTOR", 
+                    "MANUFACTURER,PACKER", "MANUFACTURER,DISTRIBUTOR",
+                    "PACKER,DISTRIBUTOR", "MANUFACTURER,PACKER,DISTRIBUTOR" ]
+            },
+            "LabelerStreetAddress": {
+                "type": "streetAddress"
+            },
+            "LabelerCity": {
+                "type": "city"
+            },
+            "LabelerStateName": {
+                "type": "region"
+            },
+            "LabelerPostalCode": {
+                "type" : "postalCode"
+            },
+            "LabelerCountryName": {
+                "type": "country"
+            },
+            "ManufacturerName": {
+                "type": "companyName"
+            },
+            "IsAContractManufacturer": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "ManufacturerRegistrationNumber": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 6000
+            },
+            "ManufacturerStreetAddress": {
+                "type": "streetAddress"
+            },
+            "ManufacturerCity": {
+                "type": "city"
+            },
+            "ManufacturerStateName": {
+                "type": "region"
+            },
+            "ManufacturerPostalCode": {
+                "type" : "postalCode"
+            },
+            "ManufacturerCountryName": {
+                "type": "country"
+            },
+            "PackerName": {
+                "type": "companyName"
+            },
+            "PackerRegistrationNumber": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 6000
+            },
+            "PackerStreetAddress": {
+                "type": "streetAddress"
+            },
+            "PackerCity": {
+                "type": "city"
+            },
+            "PackerStateName": {
+                "type": "region"
+            },
+            "PackerPostalCode": {
+                "type" : "postalCode"
+            },
+            "PackerCountryName": {
+                "type": "country"
+            },
+            "IsCommerciallyDistributed": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "CategoryCode": {
+                "type": "postalCode"
+            },
+            "CategoryDescription": {
+                "type": "brandName"
+            },
+            "FilerType": {
+                "type": "enum",
+                "list": ["", "MANUFACTURER", "PACKER", "DISTRIBUTOR",
+                    "MANUFACTURER,PACKER", "MANUFACTURER,DISTRIBUTOR",
+                    "PACKER,DISTRIBUTOR", "MANUFACTURER,PACKER,DISTRIBUTOR",
+                    "RETAILER", "RETAILER,MANUFACTURER", "RETAILER,PACKER", 
+                    "RETAILER,DISTRIBUTOR", "RETAILER,MANUFACTURER,PACKER",
+                    "RETAILER,MANUFACTURER,DISTRIBUTOR",
+                    "RETAILER,PACKER,DISTRIBUTOR",
+                    "RETAILER,MANUFACTURER,PACKER,DISTRIBUTOR" ]
+            },
+            "AuthorizedIndividualFirstName": {
+                "type": "firstName"
+            },
+            "AuthorizedIndividualLastName": {
+                "type": "lastName"
+            },
+            "AuthorizedIndividualTitle": {
+                "type": "title"
+            },
+            "AuthorizedIndividualEmail": {
+                "type": "email"
+            },
+            "AuthorizedIndividualPhone": {
+                "type": "phone"
+            },
+            "AlternativeAuthorizedIndividualFirstName": {
+                "type": "firstName"
+            },
+            "AlternativeAuthorizedIndividualLastName": {
+                "type": "lastName"
+            },
+            "AlternativeAuthorizedIndividualTitle": {
+                "type": "title"
+            },
+            "AlternativeAuthorizedIndividualEmail": {
+                "type": "email"
+            },
+            "AlternativeAuthorizedIndividualPhone": {
+                "type": "phone"
+            },
+            "Brands": {
+                "type": "brandName"
+            },
+            "Ingredients": {
+                "type": "ingredientName"
+            },
+            "RegisteredDate": {
+                "type": "date",
+                "percentNull": 5
+            },
+            "VerifiedDate": {
+                "type": "date"
+            },
+            "DiscontinuedDate": {
+                "type": "date",
+                "percentNull": 80
+            },
+            "AmendedDate": {
+                "type": "date",
+                "percentNull": 70
+            },
+            "ApprovedDate": {
+                "type": "date",
+                "percentNull": 15
+            },
+            "ApprovedBy": {
+                "type": "email",
+                "percentNull": 15
+            },
+            "ProcessedDate": {
+                "type": "date",
+                "percentNull": 50
+            },
+            "RejectedDate": {
+                "type": "date",
+                "percentNull": 90
+            },
+            "IsPaperFiling": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "AccountName": {
+                "type": "firstName"
+            },
+            "IsFDACosmetic": {
+                "type" : "enum",
+                "list": ["", "Y"]
+            },
+            "LabelElement": {
+                "type": "enum",
+                "list": ["", "1", "2", "1,2", ""]
+            },
+            "LabelClaim": {
+                "type": "enum",
+                "list": ["", "3"]
+            },
+            "IngredientIssue": {
+                "type": "enum",
+                "list": [""]
+            },
+            "Other": {
+                "type": "enum",
+                "list": [""]
+            },
+            "CreatedOn": {
+                "type": "date"
+            },
+            "CreatedBy": {
+                "type": "email"
+            }
+        }
+    }
+}

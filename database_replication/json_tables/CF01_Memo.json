@@ -1,0 +1,67 @@
+{
+    "CF01_Memo": {
+        "numRecords": 68000,
+        "fields": {
+            "MemoId": {
+                "type": "primaryKey"
+            },
+            "DocumentTypeId": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 2
+            },
+            "ObjectId": {
+                "type": "integer",
+                "condition": {
+                    "field" : "DocumentTypeId",
+                    "operator": "equal",
+                    "value": 1,
+                    "true": {
+                        "minValue": 1,
+                        "maxValue": 6000
+                    },
+                    "false": {
+                        "minValue": 1,
+                        "maxValue": 96000
+                    }
+                }
+            },
+            "Memo": {
+                "type": "string",
+                "length": {
+                    "min": 0,
+                    "max": 2000
+                }
+            },
+            "IsInternal": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "IsFromInternal": {
+                "type": "integer",
+                "minValue": 0,
+                "maxValue": 1
+            },
+            "CreatedOn": {
+                "type": "date"
+            },
+            "CreatedBy": {
+                "type": "email"
+            },
+            "ModifiedOn": {
+                "type": "date",
+                "percentNull": 40
+            },
+            "ModifiedBy": {
+                "type": "email",
+                "percentNull": 40
+            },
+            "IsActive": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 1
+            }
+        }
+    }
+}

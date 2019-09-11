@@ -1,0 +1,55 @@
+{
+    "CD02_INQUIRY_REQUESTOR": {
+        "numRecords": 220000,
+        "fields": {
+            "INQUIRY_REQUESTOR_ID": {
+                "type": "primaryKey"
+            },
+            "FIRST_NAME": {
+                "type": "firstName"
+            },
+            "LAST_NAME": {
+                "type": "lastName"
+            },
+            "CONTACT_EMAIL": {
+                "type": "email",
+                "percentNull": 40
+            },
+            "CONTACT_PHONE": {
+                "type": "phone",
+                "percentNull": 40
+            },
+            "CONTACT_ADDRESS": {
+                "type": "streetAddress",
+                "percentNull": 40
+            },
+            "COUNTRY_ID": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 247,
+                "percentNull": 60
+            },
+            "COUNTRY_OTHER": {
+                "type": "country",
+                "percentNull": 95
+            },
+            "IS_ACTIVE_BLN": {
+                "type": "integer",
+                "minValue": 1,
+                "maxValue": 1
+            },
+            "CREATED_DT": {
+                "type": "date"
+            },
+            "CREATED_BY": {
+                "type": "email"
+            },
+            "MODIFIED_DT": {
+                "type": "date"
+            },
+            "MODIFIED_BY": {
+                "type": "email"
+            }
+        }
+    }
+}
